@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Main flow" parallel="tests">
-    <test name="flow 1">
-        <classes>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" verbose="2">
 
+    <parameter name="browserType" value="chrome" />
+    <parameter name="appURL" value="https://google.com" />
+    <test name="User Tests">
+        <classes>
+            <class name="BasePageTest" />
+            <class name="SignInPageTest" />
+            <class name="CreateAccountTest" />
         </classes>
     </test>
-
 </suite>
